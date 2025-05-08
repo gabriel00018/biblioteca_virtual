@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Lista de Livros</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+<h1>Lista de Livros</h1>
+<a href="/adicionar">➕ Adicionar Livro</a>
+<table>
+<tr>
+<th>Título</th>
+<th>Autor</th>
+<th>Status</th>
+<th>Devolver até</th>
+<th>Ações</th>
+</tr>
+{% for livro in livros %}
+<tr>
+<td>{{ livro.titulo }}</td>
+<td>{{ livro.autor }}</td>
+<td>{{ 'Emprestado' if livro.emprestado else 'Disponível' }}</td>
+<td>{{ livro.data_devolucao if livro.data_devolucao else '-' }}</td>
+<td>
+<a href="/editar/{{ loop.index0 }}">Editar</a>
+<a href="/excluir/{{ loop.index0 }}">Excluir</a>
+{% if not livro.emprestado %}
+<a href="/emprestar/{{ loop.index0 }}">Emprestar</a>
+{% else %}
+<a href="/devolver/{{ loop.index0 }}">Devolver</a>
+{% if livro.multa is defined %}
+<div class="multa">Multa: R$ {{ livro.multa }}</div>
+{% endif %}
+{% endif %}
+</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+</body>
+</html>
