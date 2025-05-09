@@ -41,7 +41,7 @@ def excluir(livro_id):
 def emprestar(livro_id):
     livro = livros[livro_id]
     livro['emprestado'] = True
-    livro['data_devolucao'] = (datetime.now() + timedelta(days=7)).strftime('%Y-%m-%d')
+    livro['data_devolucao'] = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
     return redirect(url_for('index'))
 
 @app.route('/devolver/<int:livro_id>')

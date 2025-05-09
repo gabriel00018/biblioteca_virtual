@@ -1,32 +1,50 @@
 body {
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background-color: 	#ffc6f4;
+background-color: 	white;
 color: #333;
 margin: 0;
 padding: 20px;
 }
 
-h1 {
-color: 	#FF1493;
+.titulo {
+color: 	blak;
 }
+.titulo-add{
+text-align: center;
+margin-bottom: 10px;
+}
+.voltar {
+text-decoration: none;
+color:white ;
+margin-right: 10px;
+background-color:green;
+box-shadow: 0 0 10px rgba(0.5, 0.5, 0.5, 0.5);
+border-radius:7px;
+}
+.add-livro{
+text-decoration: none;
+color: white;
+margin-right: 10px;
+background-color:green;
+box-shadow: 0 0 10px rgba(0.5, 0.5, 0.5, 0.5);
+border-radius:7px;
+left-position:0px;
 
+}
 a {
 text-decoration: none;
-color: #f52cbc;
+color: green;
 margin-right: 10px;
-}
 
-a:hover {
-color: #f52cbc;
-text-decoration: underline;
 }
 
 table {
-width: 100%;
+width: 80%;
 border-collapse: collapse;
 margin-top: 20px;
 background-color: #fff;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+box-shadow: 0 0 10px rgba(0.5, 0.5, 0.5, 0.5);
+margin:auto;
 }
 
 th, td {
@@ -36,16 +54,12 @@ border-bottom: 1px solid #ddd;
 }
 
 th {
-background-color: #f52cbc;
+background-color: #4B0082;
 color: white;
 }
 
-tr:hover {
-background-color: #f1f1f1;
-}
-
 button, input[type="submit"] {
-background-color: 	#EE82EE;
+background-color: grey	;
 color: white;
 border: none;
 padding: 8px 12px;
@@ -55,7 +69,7 @@ margin-top: 10px;
 }
 
 button:hover, input[type="submit"]:hover {
-background-color: #f950d2;
+background-color:grey ;
 }
 
 input[type="text"] {
@@ -72,7 +86,7 @@ margin: auto;
 background-color: white;
 padding: 30px;
 border-radius: 8px;
-box-shadow: 0 0 15px rgba(0,0,0,0.1);
+box-shadow: 0 0 15px rgba(1,1,1,1);
 }
 
 .multa {

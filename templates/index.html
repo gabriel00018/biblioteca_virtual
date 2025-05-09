@@ -6,10 +6,12 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-<div class="container">
-<h1>Lista de Livros</h1>
-<a href="/adicionar">➕ Adicionar Livro</a>
-<table>
+<div class="">
+<div class="titulo-add">
+<h1 class="titulo">Lista de Livros</h1>
+<a class="add-livro" href="/adicionar">➕ Adicionar Livro</a>
+</div>
+    <table>
 <tr>
 <th>Título</th>
 <th>Autor</th>
@@ -24,7 +26,7 @@
 <td>{{ 'Emprestado' if livro.emprestado else 'Disponível' }}</td>
 <td>{{ livro.data_devolucao if livro.data_devolucao else '-' }}</td>
 <td>
-<a href="/editar/{{ loop.index0 }}">Editar</a>
+<a  href="/editar/{{ loop.index0 }}">Editar</a>
 <a href="/excluir/{{ loop.index0 }}">Excluir</a>
 {% if not livro.emprestado %}
 <a href="/emprestar/{{ loop.index0 }}">Emprestar</a>
